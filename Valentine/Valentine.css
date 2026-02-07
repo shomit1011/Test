@@ -5,11 +5,14 @@
 }
 
 body {
-  height: 100vh;
+  /* height: 100vh; */
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #ff758c, #ff7eb3);
-  overflow: hidden;
+  /* overflow: hidden; */
   color: #fff;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #hearts {
@@ -39,14 +42,17 @@ h1 {
   opacity: 0.9;
 }
 
+/* 🔥 SAME LAYOUT CHANGE AS ALL OTHER DAYS */
 .content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 35px;
 }
 
 .text-box {
+  max-width: 750px;
+  width: 100%;
   background: rgba(255, 255, 255, 0.2);
   padding: 30px;
   border-radius: 20px;
@@ -62,20 +68,21 @@ h1 {
 }
 
 .image-gallery {
+  max-width: 750px;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 18px;
 }
 
 .img-box {
-  height: 120px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.3);
+  height: 250px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
-  cursor: pointer;
+  overflow: hidden;
   transition: transform 0.3s, background 0.3s;
 }
 
@@ -118,8 +125,9 @@ h1 {
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-  .content {
+  .image-gallery {
     grid-template-columns: 1fr;
   }
 }

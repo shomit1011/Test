@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./Propose/Propose.css" />
 </head>
 <body>
+
   <!-- Floating hearts -->
   <div id="hearts"></div>
 
@@ -15,27 +16,53 @@
     <p class="subtitle">Some questions are asked once… and remembered forever 💖</p>
 
     <div class="content">
+
+      <!-- CENTER TEXT BOX -->
       <div class="text-box">
         <p>
           Propose Day is not just about words, it's about courage, feelings, and
           the promise of a beautiful tomorrow.
         </p>
         <p>
-          If love has given you a reason to smile, today is the perfect day to
-          let your heart speak.
+          I promise to always keep you happy and healthy and never give you a chance to complaint.
+          I'll always be like this and do anything for you meri jaan.
         </p>
+        <!-- <p class="highlight">Will you be mine forever? ❤️</p> -->
         <p class="highlight">Will you be mine forever? ❤️</p>
+
+        <div class="proposal-actions">
+          <button class="btn yes-btn" onclick="openModal('yes')">Yes 💖</button>
+          <button class="btn no-btn" onclick="openModal('no')">No 🙈</button>
+        </div>
+
       </div>
 
+      <!-- IMAGE GALLERY -->
       <div class="image-gallery">
-        <div class="img-box">Add Image</div>
-        <div class="img-box">Add Image</div>
-        <div class="img-box">Add Image</div>
+        <!-- <div class="img-box">
+          <img src="./Assets/Propose1.jpg" alt="Propose Image 1">
+        </div> -->
+        <div class="img-box">
+          <img src="./Assets/Propose1.jpeg" alt="Propose Image 2">
+        </div>
+        <div class="img-box">
+          <img src="./Assets/Propose2.jpeg" alt="Propose Image 3">
+        </div>
       </div>
+
     </div>
 
     <a href="index.html" class="back-btn">← Back to Valentine Week</a>
   </div>
+
+    <!-- MODAL -->
+  <div id="proposalModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <p id="modalMessage"></p>
+    </div>
+  </div>
+
 
   <script src="./Propose/Propose.js"></script>
 </body>
